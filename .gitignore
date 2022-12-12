@@ -1,0 +1,5 @@
+/.idea
+.env
+/nbproject
+.DS_Store
+.vscode
