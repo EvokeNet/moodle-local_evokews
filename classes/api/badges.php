@@ -12,11 +12,11 @@ namespace local_evokews\api;
 
 defined('MOODLE_INTERNAL') || die();
 
-use external_api;
-use external_function_parameters;
-use external_multiple_structure;
-use external_single_structure;
-use external_value;
+use core_external\external_api;
+use core_external\external_function_parameters;
+use core_external\external_multiple_structure;
+use core_external\external_single_structure;
+use core_external\external_value;
 use local_evokegame\util\badge;
 
 class badges extends external_api {
@@ -42,7 +42,7 @@ class badges extends external_api {
             return [];
         }
 
-        $context = \context_course::instance($campaignid);
+        $context = \core\context\course::instance($campaignid);
 
         $badgeutil = new badge();
         $badges = $badgeutil->get_course_badges_with_user_award($USER->id, $campaignid, $context->id, 1, $highlight);
