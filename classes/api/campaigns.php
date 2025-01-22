@@ -82,6 +82,35 @@ class campaigns extends external_api {
         );
     }
 
+    public static function get_campaign_parameters() {
+        return new external_function_parameters([
+            'id' => new external_value(PARAM_INT, 'The campaign/course ID'),
+        ]);
+    }
+
+    /**
+     * Returns all courses/campaigns
+     *
+     * @param $userid
+     */
+    public static function get_campaign($id) {
+        global $DB;
+
+        self::validate_parameters(self::get_campaign_parameters(), ['id' => $id]);
+
+        $course = $DB->get_record('course', ['id' => $id], 'id, shortname, fullname', MUST_EXIST);
+
+        return $course;
+    }
+
+    public static function get_campaign_returns() {
+        return new external_single_structure([
+            'id' => new external_value(PARAM_INT, 'The campaign/course ID'),
+            'shortname' => new external_value(PARAM_TEXT, 'The campaign/course shortname'),
+            'fullname' => new external_value(PARAM_TEXT, 'The campaign/course fullname')
+        ]);
+    }
+
     public static function create_parameters() {
         return new external_function_parameters([
             'shortname' => new external_value(PARAM_TEXT, 'The campaign shortname'),

@@ -11,7 +11,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_evokews';
-$plugin->release = '1.1.0';
-$plugin->version = 2023110800;
+$plugin->release = '1.2.0';
+$plugin->version = 2025012200;
 $plugin->requires = 2022041200;
 $plugin->maturity = MATURITY_STABLE;

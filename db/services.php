@@ -34,6 +34,13 @@ $functions = [
         'description' => get_string('function:get_all_campaigns', 'local_evokews'),
         'type' => 'read'
     ],
+    'local_evokews_get_campaign' => [
+        'classname' => 'local_evokews\api\campaigns',
+        'methodname' => 'get_campaign',
+        'classpath' => 'local/evokews/classes/api/campaigns.php',
+        'description' => get_string('function:get_campaign', 'local_evokews'),
+        'type' => 'read'
+    ],
     'local_evokews_create_campaign' => [
         'classname' => 'local_evokews\api\campaigns',
         'methodname' => 'create',
@@ -63,11 +70,12 @@ $services = [
             'local_evokews_get_user_campaign_badges',
             'local_evokews_get_user_campaigns',
             'local_evokews_get_all_campaigns',
+            'local_evokews_get_campaign',
             'local_evokews_create_campaign',
             'local_evokews_duplicate_campaign',
-            'local_evokews_create_group'
+            'local_evokews_create_group',
         ],
-        'restrictedusers' => 0,
+        'restrictedusers' => 1,
         'enabled' => 1
     ]
 ];
