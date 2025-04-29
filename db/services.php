@@ -66,7 +66,7 @@ $functions = [
         'classname' => 'local_evokews\api\users',
         'methodname' => 'create',
         'classpath' => 'local/evokews/classes/api/users.php',
-        'description' => get_string('function:create_group', 'local_evokews'),
+        'description' => get_string('function:create_user', 'local_evokews'),
         'type' => 'write'
     ],
 ];
@@ -81,6 +81,7 @@ $services = [
             'local_evokews_create_campaign',
             'local_evokews_duplicate_campaign',
             'local_evokews_create_group',
+            'local_evokews_create_user',
         ],
         'restrictedusers' => 1,
         'enabled' => 1

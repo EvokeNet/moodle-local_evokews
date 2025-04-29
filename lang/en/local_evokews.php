@@ -19,3 +19,4 @@ $string['function:get_campaign'] = 'Return a campaign info';
 $string['function:create_campaign'] = 'Create a new campaign';
 $string['function:duplicate_campaign'] = 'Duplicate an existing campaign';
 $string['function:create_group'] = 'Create a group';
+$string['function:create_user'] = 'Create a user';
