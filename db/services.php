@@ -62,6 +62,13 @@ $functions = [
         'description' => get_string('function:create_group', 'local_evokews'),
         'type' => 'write'
     ],
+    'local_evokews_create_user' => [
+        'classname' => 'local_evokews\api\users',
+        'methodname' => 'create',
+        'classpath' => 'local/evokews/classes/api/users.php',
+        'description' => get_string('function:create_group', 'local_evokews'),
+        'type' => 'write'
+    ],
 ];
 
 $services = [
